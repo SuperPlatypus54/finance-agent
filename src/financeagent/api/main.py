@@ -29,7 +29,7 @@ from sse_starlette.sse import EventSourceResponse
 
 from ..agent import make_finance_agent
 from ..agent.core import Agent
-from ..config import PROJECT_ROOT
+from ..config import FRONTEND_DIR
 
 app = FastAPI(title="Finance Agent API")
 
@@ -104,4 +104,5 @@ def health():
     return {"status": "ok"}
 
 
-app.mount("/", StaticFiles(directory=PROJECT_ROOT / "frontend", html=True), name="frontend")
+if FRONTEND_DIR is not None:
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanderbilt Personal Finance</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="brand">
+      <span class="brand-name">VANDERBILT</span>
+      <span class="brand-rule"></span>
+      <span class="brand-sub">Personal Finance</span>
+    </div>
+    <button class="btn btn-primary btn-sm" id="new-conversation">New conversation</button>
+  </header>
+
+  <div class="scroll" id="scroll">
+    <div class="thread" id="thread"></div>
+  </div>
+
+  <div class="composer-wrap">
+    <div class="composer">
+      <div class="chips" id="chips">
+        <button class="chip">Show my asset allocation for AAPL:10:150, MSFT:5:300</button>
+        <button class="chip">How has AAPL moved over the last 90 days?</button>
+        <button class="chip">Compare AAPL and MSFT</button>
+      </div>
+      <div class="input-row">
+        <textarea id="input" rows="1" placeholder="Ask about your portfolio, a stock, or a comparison…"></textarea>
+        <button class="btn btn-dark btn-md" id="send" disabled>Send</button>
+      </div>
+      <div class="disclaimer">For information only — not personalized investment advice. Market data may be delayed.</div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

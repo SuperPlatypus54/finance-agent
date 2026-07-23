@@ -31,7 +31,7 @@ TAVILY_API_KEY = os.environ.get("TAVILY_API_KEY", "")
 FINNHUB_API_KEY = os.environ.get("FINNHUB_API_KEY", "")
 ALPHA_VANTAGE_API_KEY = os.environ.get("ALPHA_VANTAGE_API_KEY", "")
 
-MODEL = os.environ.get("OPENROUTER_MODEL", "deepseek/deepseek-v4-pro")
+MODEL = os.environ.get("OPENROUTER_MODEL", "anthropic/claude-sonnet-5")
 
 DATA_DIR = _writable_data_dir()
 SANDBOX_DIR = DATA_DIR / "sandbox"
